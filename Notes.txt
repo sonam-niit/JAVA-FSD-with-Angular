@@ -1,0 +1,72 @@
+Create Angular Application: ng new medicare-frontend
+
+move to that app: cd medicare-frontend
+
+run using : ng serve
+
+-----------------------------------------------------------
+
+open application folder in VScode
+
+1. install bootstrap.
+
+-- npm install bootstrap
+
+open styles.css file in src folder and add below mentioned line
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+save the file.
+
+2. Add HttpClientModule and ReactiveFormsModule in your app.module.ts
+
+3. create Customer Model in your app: right click on app --> create new file
+   --> customerModel.ts
+4. when you create a model it will give you initialization error in your class.
+   to resolve open tsconfig.json file and add below value in copileroptions.
+
+	"strictPropertyInitialization": false,
+
+	save the file so the error will get resolved
+
+5. create one service using: ng g s customer
+
+	edit customer.service.ts file
+
+6. to add data create a component register
+	ng g c register
+
+	ng g c list
+
+7. open app-routing module.ts and add routes.
+
+8. open app.component.html and create Navigation Bar
+
+9. edit list.component.ts and list.component.html file
+
+10. run and check to add the data and see the list.
+
+11. create a details component to view the individual user details.
+
+12. edit details.component.ts and details.component.html file
+
+13. for delete you can check list.component.html and list.component.ts file where delete method implemented
+	filer also used to refresh the list client side.
+
+14.create editcustomer component and update .ts and .html file.
+
+check output accordingly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
