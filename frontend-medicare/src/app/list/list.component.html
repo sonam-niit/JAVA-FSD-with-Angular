@@ -1,0 +1,33 @@
+<div>
+    <h1>Customer List</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of customers">
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.address}}</td>
+                <td>
+                    <a routerLink="/details/{{c.id}}">
+                        <button class="btn btn-success">View</button>
+                    </a>
+                    &nbsp;
+                    <button class="btn btn-danger" (click)="delete(c.id)">Delete</button>
+                    &nbsp;
+                    <a routerLink="/edit/{{c.id}}">
+                        <button class="btn btn-primary">Edit</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
